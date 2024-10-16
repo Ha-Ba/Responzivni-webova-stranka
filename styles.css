@@ -1,0 +1,160 @@
+* {
+  margin: 0 auto;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  font-family: "Roboto", Courier, sans-serif;
+  background-color: gray;
+}
+
+:root {
+  --menu-color: green;
+  --header-color: white;
+  --nav-background: #33292a;
+  --dark-section-background: #644b4f;
+  --footer-background: #333333;
+}
+h1,
+h2 {
+  padding-bottom: 20px;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* MOBILE FIRST do 768px */
+
+/* HEADER A NAVIGACE */
+header {
+  color: var(--header-color);
+}
+
+.navigation {
+  background-color: var(--nav-background);
+  color: #fff;
+  /* width: 80%; */
+  /* display: flex; */
+  /* flex: 1; */
+  justify-content: center;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  padding: 0;
+}
+
+.navigation-item {
+  padding: 10px 0;
+}
+
+.navigation-item a {
+  color: var(--header-color);
+  font-weight: bold;
+  text-decoration: none;
+}
+/* HERO */
+
+#hero {
+  border: 4px solid blue;
+  background-image: url(./images/hero_scott-goodwill-y8Ngwq34_Ak-unsplash.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* height: 150px; */
+}
+.wrapper {
+  width: 80%;
+  height: 250px;
+  padding: 48px 0;
+  border: 1px solid red;
+}
+.hero-wrapper {
+  position: relative;
+}
+.hero-text {
+  color: var(--header-color);
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+  text-align: right;
+}
+/* ABOUT US */
+#about-us {
+  border: 4px dotted green;
+}
+.about-us-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.about-us-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---What we do ------------------------ */
+.what-we-do-text {
+  text-align: center;
+}
+.icon-cards-what-we-do {
+  display: grid;
+  row-gap: 20px;
+  text-align: center;
+
+  /* */
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(12, 1fr);
+}
+.icon-card p {
+  color: #fff;
+  text-align: center;
+}
+
+.icons {
+  height: 103px;
+  width: 85px;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .icon-cards-what-we-do {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+}
+
+/* ---Our trips ------------------------ */
+.our-trips-wrapper {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  justify-items: center;
+  position: relative;
+}
+
+.photo-galery-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  height: 260px;
+  /* gap: 0;
+  margin: 0; */
+}
+@media (min-width: 768px) {
+  .photo-galery-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+}
+
+.dark-background {
+  background-color: var(--dark-section-background);
+}
+
+.review-cards {
+  display: flex;
+  flex-direction: column;
+}
