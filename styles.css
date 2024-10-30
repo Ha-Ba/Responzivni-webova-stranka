@@ -37,6 +37,17 @@ img {
   padding: 48px 0;
   /* border: 1px solid red; */
 }
+
+@media (min-width: 756px) {
+  .wrapper {
+    max-width: 856px;
+    margin: 0 auto;
+  }
+  .header-wrapper {
+    max-width: 856px;
+  }
+}
+
 #what-we-do {
   background-color: var(--what-we-do-background);
   color: var(--dark-section-color);
@@ -97,6 +108,7 @@ header {
   }
   .navigation-li a {
     justify-items: space-around;
+    font-size: 20px;
   }
 }
 
@@ -121,6 +133,12 @@ header {
   right: 28px;
   bottom: 64px;
   text-align: right;
+  font-size: 42px;
+}
+@media (min-width: 768px) {
+  .hero-text {
+    font-size: 96px;
+  }
 }
 /* ABOUT US */
 .about-us-wrapper {
