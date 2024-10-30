@@ -6,9 +6,14 @@
 
 :root {
   --header-color: #fff;
-  --nav-background: #33292a;
-  --dark-section-background: #644b4f;
+  --dark-section-color: #ffffff;
+  --nav-background: #3a2e2f;
+  --what-we-do-background: #33292a;
+  --where-to-go-background: #644b4f;
   --footer-background: #333333;
+  --link-color: #efa69d;
+  --link-hover-color: #e9877b;
+  --light-backround: #f2f2f2;
 }
 
 h1,
@@ -32,8 +37,16 @@ img {
   padding: 48px 0;
   /* border: 1px solid red; */
 }
-.dark-background {
-  background-color: var(--dark-section-background);
+#what-we-do {
+  background-color: var(--what-we-do-background);
+  color: var(--dark-section-color);
+}
+#where-to-go {
+  background-color: var(--where-to-go-background);
+  color: var(--dark-section-color);
+}
+.light-background {
+  background-color: var(--light-backround);
 }
 /* MOBILE FIRST do 768px */
 
@@ -177,8 +190,6 @@ header {
 .our-trips-wrapper {
   display: grid;
   gap: 10px;
-  /* max-width: 1000px; */
-  /* justify-items: center; */
   grid-template-columns: (1, 1fr);
   grid-template-rows: (1, 1fr);
   grid-template-areas:
@@ -252,12 +263,12 @@ header {
   }
 }
 /* ---- Where to go ----------------*/
-#where-to-go {
+/* #where-to-go {
   color: var(--header-color);
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
+} */
 .where-to-go-left {
   width: 100%;
 }
@@ -265,7 +276,6 @@ header {
   width: 100%;
 }
 .where-to-go-right p {
-  text-align: left;
   padding-bottom: 20px;
 }
 
@@ -273,7 +283,6 @@ button {
   height: 43px;
   width: 133px;
   border-radius: 5px;
-  font-family: "inter";
   font-weight: 700;
   margin-top: 20px;
 }
@@ -281,7 +290,6 @@ button {
   .where-to-go-wrapper {
     display: flex;
     flex-direction: row;
-    text-align: left;
     gap: 20px;
   }
   .where-to-go-left {
@@ -289,6 +297,7 @@ button {
   }
   .where-to-go-right {
     width: 70%;
+    text-align: left;
   }
 }
 
@@ -338,6 +347,7 @@ button {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
 }
+
 @media (min-width: 768px) {
   .photogalery-wrapper {
     grid-template-columns: repeat(2, 1fr);
@@ -353,10 +363,16 @@ button {
   font-weight: 700;
 }
 .footer-wrapper a {
-  color: #efa69d;
-
+  color: var(--link-color);
   font-size: 12px;
 }
+.footer-wrapper a:hover {
+  color: var(--link-hover-color);
+}
+.mailto {
+  padding-bottom: 10px;
+}
+
 .footer-wrapper p {
   color: #ffffff;
   font-size: 10px;
