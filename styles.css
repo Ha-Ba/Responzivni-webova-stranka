@@ -119,6 +119,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: calc(100dvh - 67px)
 }
 
 .hero-wrapper {
